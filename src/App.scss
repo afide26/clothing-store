@@ -15,6 +15,7 @@ html {
 
 body {
   font-family: 'Open Sans Condensed', sans-serif;
+  padding: 20px 60px;
 }
 
 p {
@@ -47,4 +48,9 @@ h2 {
 
 h1 {
   font-size: $hBase*4;
+}
+
+span,
+a {
+  font-size: $hBase*1.8;
 }
