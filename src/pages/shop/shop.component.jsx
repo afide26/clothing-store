@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { getCollections } from "../../data/collections.data.js";
 import CollectionPreview from "../../components/collection-preview/collection-preview";
 
@@ -21,7 +20,6 @@ class ShopPage extends Component {
     const { collections } = this.state;
     return (
       <div>
-        <Link to="/">Home</Link>
         {collections.map(({ id, ...otherCollectionProps }) => (
           <CollectionPreview key={id} {...otherCollectionProps} />
         ))}
