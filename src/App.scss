@@ -6,7 +6,7 @@
 }
 
 $hBase: 10px;
-$base-color: red;
+$base-color: #58585a;
 
 html {
   box-sizing: border-box;
@@ -19,14 +19,17 @@ body {
 }
 
 p {
+  color: $base-color;
   font-size: $hBase*1.6;
 }
 
 h6 {
+  color: $base-color;
   font-size: $hBase*.8;
 }
 
 h5 {
+  color: $base-color;
   font-size: $hBase*1;
 }
 
@@ -35,22 +38,27 @@ h4 {
 }
 
 h4 {
+  color: $base-color;
   font-size: $hBase*1.5;
 }
 
 h3 {
+  color: $base-color;
   font-size: $hBase*2;
 }
 
 h2 {
+  color: $base-color;
   font-size: $hBase*3;
 }
 
 h1 {
+  color: $base-color;
   font-size: $hBase*4;
 }
 
 span,
 a {
+  color: $base-color;
   font-size: $hBase*1.8;
 }
