@@ -245,3 +245,7 @@ const SHOP_DATA = [
     ]
   }
 ];
+
+export const getCollections = () => {
+  return SHOP_DATA;
+};
