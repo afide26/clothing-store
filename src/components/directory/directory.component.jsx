@@ -23,12 +23,7 @@ class Directory extends Component {
     return (
       <div className="directory-menu">
         {sections.map(({ title, imageUrl, id, size }) => (
-          <MenuItem
-            key={id}
-            imageUrl={imageUrl}
-            title={title.toUpperCase()}
-            size={size}
-          />
+          <MenuItem key={id} imageUrl={imageUrl} title={title} size={size} />
         ))}
       </div>
     );
