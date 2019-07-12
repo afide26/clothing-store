@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
 import { getFirstName } from "../../helpers/helpers";
+import { connect } from "react-redux";
 import "font-awesome/css/font-awesome.min.css";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import "./header.styles.scss";
@@ -21,7 +22,7 @@ const Header = ({ currentUser }) => {
         </Link>
         {currentUser ? (
           <div className="option" onClick={() => auth.signOut()}>
-            Hi {getFirstName(currentUser.displayName)}
+            HI {getFirstName(currentUser.displayName)}
             <span>
               <i className="fa fa-sign-out" />
             </span>
@@ -36,4 +37,9 @@ const Header = ({ currentUser }) => {
   );
 };
 
-export default Header;
+// state is the rootReducer
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(Header);
