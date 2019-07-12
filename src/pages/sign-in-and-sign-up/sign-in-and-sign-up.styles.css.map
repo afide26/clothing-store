@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,aAAa;EAC9B,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,SAAS;CAClB",
+    "sources": [
+        "sign-in-and-sign-up.styles.scss"
+    ],
+    "names": [],
+    "file": "sign-in-and-sign-up.styles.css"
+}
