@@ -27,12 +27,9 @@ class SignIn extends Component {
 
   handleChange = e => {
     const { name, value } = e.target;
-    this.setState(
-      {
-        [name]: value
-      },
-      () => console.log(this.state)
-    );
+    this.setState({
+      [name]: value
+    });
   };
   render() {
     const { email, password } = this.state;
@@ -55,12 +52,11 @@ class SignIn extends Component {
             required
             handleChange={this.handleChange}
           />
-          <div className="button-group">
-            <CustomButton type="submit">Sign In</CustomButton>
-            <CustomButton onClick={signInWithGoogle}>
-              Sign In with Google
-            </CustomButton>
-          </div>
+
+          <CustomButton type="submit">Sign In</CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSignIn={true}>
+            Sign In with Google
+          </CustomButton>
         </form>
       </div>
     );
