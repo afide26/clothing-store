@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { auth } from "../../firebase/firebase.utils";
+
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../../components/custom-button/custom-button.component";
 
@@ -16,13 +18,17 @@ class SignIn extends Component {
     };
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
+    const { email, password } = this.state;
 
-    this.setState({
-      email: "",
-      password: ""
-    });
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+
+      this.setState({ email: "", password: "" });
+    } catch (error) {
+      console.log("Cannot login", error.message);
+    }
   };
 
   handleChange = e => {
