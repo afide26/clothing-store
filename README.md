@@ -1,4 +1,4 @@
-### Clothing Store E-Commerce Project
+# Clothing Store E-Commerce Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
