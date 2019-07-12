@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
+import { getFirstName } from "../../helpers/helpers";
+import "font-awesome/css/font-awesome.min.css";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import "./header.styles.scss";
 
@@ -19,10 +21,13 @@ const Header = ({ currentUser }) => {
         </Link>
         {currentUser ? (
           <div className="option" onClick={() => auth.signOut()}>
-            SIGN OUT
+            Hi {getFirstName(currentUser.displayName)}
+            <span>
+              <i className="fa fa-sign-out" />
+            </span>
           </div>
         ) : (
-          <Link className="option" to="/signin">
+          <Link className="option" to="/sign-in">
             SIGN IN
           </Link>
         )}

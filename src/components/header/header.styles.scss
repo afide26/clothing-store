@@ -15,12 +15,18 @@
   .options {
     color: #58585a;
     font-size: 1.8rem;
+    text-transform: uppercase;
     cursor: pointer;
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    & .fa {
+      color: #58585a;
+      margin-left: 5px;
+    }
 
     .option {
       padding: 10px 15px;
