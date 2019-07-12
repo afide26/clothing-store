@@ -7,3 +7,4 @@ This project is the capstone project for the [Complete React Developer Course 20
 ### Tools Used
 
 1. Used node-sass for SCSS styling
+2. Firebase for authentication
