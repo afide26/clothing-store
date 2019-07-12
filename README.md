@@ -8,3 +8,5 @@ This project is the capstone project for the [Complete React Developer Course 20
 
 1. Used node-sass for SCSS styling
 2. Firebase for authentication
+3. Redux
+4. React Router
