@@ -24,11 +24,15 @@
   }
 
   .quantity {
-    padding-left: 20px;
+    display: flex;
 
-    & span {
+    .arrow {
       cursor: pointer;
       outline: none;
+    }
+
+    .value {
+      margin: 0 10px;
     }
   }
 
