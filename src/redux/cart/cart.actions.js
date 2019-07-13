@@ -1,4 +1,8 @@
-import { TOGGLE_CART_VISIBILITY, ADD_ITEM, REMOVE_ITEM } from "./cart.types";
+import {
+  TOGGLE_CART_VISIBILITY,
+  ADD_ITEM,
+  CLEAR_ITEM_FROM_CART
+} from "./cart.types";
 
 export const toggleCartVisibility = () => {
   return {
@@ -13,9 +17,9 @@ export const addItem = item => {
   };
 };
 
-export const removeItem = item => {
+export const clearItemFromCart = item => {
   return {
-    type: REMOVE_ITEM,
+    type: CLEAR_ITEM_FROM_CART,
     payload: item
   };
 };
