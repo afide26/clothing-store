@@ -7,9 +7,14 @@ import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import { connect } from "react-redux";
 import "font-awesome/css/font-awesome.min.css";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
+import { createStructuredSelector } from "reselect";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import "./header.styles.scss";
 
 const Header = ({ currentUser, hidden }) => {
+  if (currentUser)
+    console.log("Current user", Object.values(currentUser)[0].displayName);
   return (
     <div className="header">
       <Link className="logo-container" to="/">
@@ -24,7 +29,7 @@ const Header = ({ currentUser, hidden }) => {
         </Link>
         {currentUser ? (
           <div className="option" onClick={() => auth.signOut()}>
-            HI {getFirstName(currentUser.displayName)}
+            HI {getFirstName(currentUser)}
             <span>
               <i className="fa fa-sign-out" />
             </span>
@@ -42,9 +47,9 @@ const Header = ({ currentUser, hidden }) => {
 };
 
 // state is the rootReducer
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-  currentUser,
-  hidden
+const mapStateToProps = createStructuredSelector({
+  hidden: selectCartHidden,
+  currentUser: selectCurrentUser
 });
 
 export default connect(mapStateToProps)(Header);
