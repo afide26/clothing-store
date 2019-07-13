@@ -13,8 +13,6 @@ import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import "./header.styles.scss";
 
 const Header = ({ currentUser, hidden }) => {
-  if (currentUser)
-    console.log("Current user", Object.values(currentUser)[0].displayName);
   return (
     <div className="header">
       <Link className="logo-container" to="/">
