@@ -1,5 +1,6 @@
 import React from "react";
 import CustomButton from "../custom-button/custom-button.component";
+import CartItem from "../cart-item/cart-item.component";
 import { connect } from "react-redux";
 import "./cart-dropdown.styles.scss";
 
@@ -8,15 +9,7 @@ const CartDropdown = ({ cartItems }) => {
     <div className="cart-dropdown">
       <div className="cart-items">
         {cartItems.map(item => (
-          <div key={item.id} className="cart-item-container">
-            <img
-              className="cart-item-container-image"
-              src={item.imageUrl}
-              alt={item.name}
-            />
-            <p className="cart-item-container-name">{item.name}</p>
-            <p>{item.price}</p>
-          </div>
+          <CartItem key={item.id} item={item} />
         ))}
       </div>
       <CustomButton>Go To Checkout</CustomButton>
