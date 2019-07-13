@@ -11,6 +11,23 @@
   right: 40px;
   z-index: 5;
 
+  & .cart-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    width: 90%;
+    margin-bottom: 5px;
+
+    &-name {
+      align-content: flex-end;
+      text-align: left;
+    }
+
+    &-image {
+      width: 50px;
+    }
+  }
+
   .cart-items {
     height: 240px;
     display: flex;
@@ -21,4 +38,5 @@
   button {
     margin-top: auto;
   }
+
 }
