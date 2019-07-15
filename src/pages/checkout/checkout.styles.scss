@@ -32,8 +32,19 @@
       font-size: inherit;
     }
   }
-  pre{
-    color:white;
-    display:none !important;
+  .test-warning{
+    border-top:1px solid #d31145;
+    border-bottom:1px solid #d31145;
+    font-size:2rem;
+    color:#d31145;
+    text-align:center;
+    margin:20px auto;
+    padding:10px;
+  }
+
+  button{
+    margin-left:auto;
+    margin-top:50px;
+    min-width:150px;
   }
 }
