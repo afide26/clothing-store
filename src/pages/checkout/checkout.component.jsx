@@ -36,6 +36,8 @@ const CheckoutPage = ({ cartItems, total }) => {
       <div className="total">
         <span>TOTAL: ${total}</span>
       </div>
+      {total > 0 &&(
+      <>
       <div className="test-warning">
         *Please use the following test credit card for payments*
         <br/>
@@ -44,6 +46,8 @@ const CheckoutPage = ({ cartItems, total }) => {
         CVW: 123
       </div>
       <StripeCheckoutButton price={total}/>
+      </>
+      )}
     </div>
   );
 };
