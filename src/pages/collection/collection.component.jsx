@@ -5,7 +5,7 @@ import CollectionItem from "../../components/collection-item/collection-item.com
 import "./collection.styles.scss";
 
 const CollectionPage = ({ collection }) => {
-  console.log("Match from Collection", collection);
+  if(process.env.NODE_ENV==='development')console.log("Match from Collection", collection);
   const { title, items } = collection;
   return (
     <div className="collection-page">
