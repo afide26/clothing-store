@@ -10,3 +10,8 @@ This project is the capstone project for the [Complete React Developer Course 20
 2. Firebase for authentication
 3. Redux
 4. React Router
+5. Reselect
+6. Styled components
+7. Hooks
+8. Context API
+9. Stripe API for payments
