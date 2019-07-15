@@ -6,7 +6,7 @@ import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 import "./cart-icon.styles.scss";
 
 const CartIcon = ({ toggleCartVisibility, itemCount }) => {
-  {process.env.NODE_ENV === 'development' ? console.log("CartItems", itemCount):null};
+  if(process.env.NODE_ENV === 'development') console.log("CartItems", itemCount);
   return (
     <div className="cart-icon" onClick={toggleCartVisibility}>
       <ShoppingIcon className="shopping-icon" />

@@ -4,7 +4,7 @@ import CollectionPage from "../../pages/collection/collection.component";
 import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
 
 const ShopPage = ({ match }) => {
-  {process.env.NODE_ENV === 'development' ? console.log(match) :null;}
+  if(process.env.NODE_ENV === 'development') console.log(match)
   return (
     <div className="shop-page">
       <Route exact path={`${match.path}`} component={CollectionsOverview} />
