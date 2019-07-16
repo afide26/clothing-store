@@ -9,11 +9,9 @@ import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
-// import "./header.styles.scss";
 
 import {
   OptionLink,
-  OptionDiv,
   OptionsContainer,
   LogoContainer,
   HeaderContainer
@@ -29,12 +27,12 @@ const Header = ({ currentUser, hidden }) => {
         <OptionLink to="/shop">SHOP</OptionLink>
         <OptionLink to="/contact">CONTACT</OptionLink>
         {currentUser ? (
-          <OptionDiv onClick={() => auth.signOut()}>
+          <OptionLink as="div" onClick={() => auth.signOut()}>
             HI {getFirstName(currentUser)}
             <span>
               <i className="fa fa-sign-out" />
             </span>
-          </OptionDiv>
+          </OptionLink>
         ) : (
           <OptionLink to="/sign-in">SIGN IN</OptionLink>
         )}
